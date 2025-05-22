@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, DateTime, ForeignKey, JSON
-from datetime import datetime
+from datetime import datetime, timezone
 from app.db.base import Base
 
 class EventVersion(Base):
@@ -8,4 +8,4 @@ class EventVersion(Base):
     event_id = Column(Integer, ForeignKey("events.id"))
     modified_by = Column(Integer, ForeignKey("users.id"))
     data_snapshot = Column(JSON)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=lambda: datetime.now(tz=timezone.utc))
