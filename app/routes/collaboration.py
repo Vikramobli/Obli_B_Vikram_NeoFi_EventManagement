@@ -4,7 +4,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from app.db.session import SessionLocal
 from app.models.permission import EventPermission, RoleEnum
-from app.db.base import Base
+from pydantic import BaseModel
 from app.models.event import Event
 from app.schemas.permission import ShareRequest
 from app.utils.dependencies import get_current_user
@@ -14,7 +14,7 @@ from app.utils.dependencies import get_current_user
 router = APIRouter(prefix="/api/events")
 
 
-class PermissionUpdateRequest(Base):
+class PermissionUpdateRequest(BaseModel):
     role: RoleEnum
 
 @router.post("/{id}/share")
