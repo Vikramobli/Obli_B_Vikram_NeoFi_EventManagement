@@ -40,20 +40,27 @@ Already Deployed on Railway : https://oblibvikramneofieventmanagement-production
 git clone https://github.com/your-username/neofi-event-backend.git
 cd neofi-event-backend
 
-2. Create and activate virtual environment
+--- 
 
+### 2. Create and activate virtual environment
+
+```bash
 python -m venv venv
 # On Linux/macOS:
 source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
 
-3. Install dependencies
+---
 
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
 
-4. Configure environment variables
+---
 
+### 4. Configure environment variables
+```bash
 Create a .env file in the project root with the following content:
 
 DATABASE_URL=postgresql://<username>:<password>@<host>:<port>/<database>
@@ -62,8 +69,11 @@ ALGORITHM=HS256
 
 Replace placeholders with your actual database credentials and JWT secret.
 
-5. Start the server
+---
 
+### 5. Start the server
+
+```bash
 uvicorn app.main:app --reload
 
 Server will run at:
