@@ -39,7 +39,7 @@ Already Deployed on Railway : https://oblibvikramneofieventmanagement-production
 ```bash
 git clone https://github.com/your-username/neofi-event-backend.git
 cd neofi-event-backend
-bash```
+```
 ### 2. Create and activate virtual environment
 
 ```bash
@@ -48,12 +48,12 @@ python -m venv venv
 source venv/bin/activate
 # On Windows:
 venv\Scripts\activate
-bash```
+```
 
 ### 3. Install dependencies
 ```bash
 pip install -r requirements.txt
-bash```
+```
 
 ### 4. Configure environment variables
 ```bash
@@ -64,7 +64,7 @@ SECRET_KEY=your_jwt_secret_key
 ALGORITHM=HS256
 
 Replace placeholders with your actual database credentials and JWT secret.
-bash```
+```
 
 ### 5. Start the server
 
