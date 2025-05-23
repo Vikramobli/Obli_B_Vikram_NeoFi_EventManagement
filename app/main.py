@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import auth, collaboration, events, version
 
+from dotenv import load_dotenv
+load_dotenv()
+
 app = FastAPI(title="NeoFi Collaborative Event Manager", version="1.0.0")
 
 app.add_middleware(
